@@ -78,6 +78,10 @@ jobs:
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
+      
+    - name: OpenAppFilter
+      run: cd openwrt/package && git clone https://github.com/destan19/OpenAppFilter.git
+      
 
     - name: Load custom configuration
       run: |
